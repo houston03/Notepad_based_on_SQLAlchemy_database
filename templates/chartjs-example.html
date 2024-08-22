@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+<h2>The popularity of the python language</h2>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Chartjs Charts</title>
+</head>
+
+<body>
+    <div style="height: 50vh; width: 100%;">
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+        const labels = {{ labels | tojson}};
+
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Sales',
+                backgroundColor: 'white',
+                borderColor: 'dimgray',
+                data: {{ data | tojson}},
+            }]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: { maintainAspectRatio: false }
+        };
+
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+
+    </script>
+
+    <div style="margin: 10px 20px 0px 20px">
+<p>Python Language Popularity Index.</p>
+    </div>
+</body>
+    <div class="card__button">
+<a class="btn btn-outline-light" type="button" href="/pie">View the diagram</a>
+    </div>
+
+{% endblock %}

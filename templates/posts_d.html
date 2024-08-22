@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ arti.title }}
+{% endblock %}
+
+{% block body %}
+
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/post.css') }}">
+    <div style="margin: 0px 20px 10px 20px">
+<h1>Section for editing and deleting entries</h1>
+    </div>
+    <div class="alert alert-dark">
+
+        <h1 class="text-light">{{ arti.title }}</h1>
+
+        <p class="text-light" ><b class="text-light">Functional:  </b>{{ arti.intro }}</p>
+        <p class="text-light" ><b class="text-light">Appearance:  </b>{{ arti.text }}</p>
+        <p class="text-light" ><b class="text-light">{{ arti.date.date() }}</b></p>
+        <a href="/posts/{{ arti.id }}/del" class="btn btn-outline-danger">Delete</a>
+        <a href="/posts/{{ arti.id }}/update" class="btn btn-outline-success">Change</a>
+        <a href="/posts" class="btn btn-outline-light">Back</a>
+</div>
+
+
+
+
+
+
+{% endblock %}

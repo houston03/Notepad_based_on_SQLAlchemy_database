@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
+
+:root {
+  /* Colors */
+
+
+  --white: hsl(0, 0%, 100%);
+  /* Fonts */
+  --font-title: "Montserrat", sans-serif;
+  --font-text: "Lato", sans-serif;
+}
+
+/* RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h2, h1,
+p {
+  margin: 0;
+}
+
+
+
+h2, h1 {
+  font-size: 2.25rem;
+  font-family: var(--font-title);
+  color: var(--white);
+  line-height: 1.1;
+}
+
+p {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--white);
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #222;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+

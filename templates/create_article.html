@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tet.css') }}">
+    <div style="margin: 220px 20px 193px 20px">
+    <div class="container">
+    <h1>What kind of program would you like to create?</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" placeholder="The name of the program" style="margin: 20px 20px -6px 20px"><br>
+        <textarea name="intro" id="intro" class="form-control" placeholder="Functional" style="margin: 2px 20px 2px 20px"></textarea><br>
+        <textarea name="text" id="text" class="form-control" placeholder="Appearance" style="margin: -6px 20px -10px 20px"></textarea><br>
+        <input type="submit" class="btn btn-outline-light" value="     Save and send     " style="margin: 5px 20px 1px 20px">
+    </form>
+    </div>
+    </div>
+{% endblock %}

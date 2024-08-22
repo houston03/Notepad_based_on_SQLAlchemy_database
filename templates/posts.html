@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Offers
+{% endblock %}
+
+{% block body %}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pos.css') }}">
+    <div style="margin: 20px 20px 10px 20px">
+    <h1>Your suggestions</h1>
+    </div>
+<div class="container">
+    {% for el in art %}
+
+<div class="alert alert-dark">
+
+     <h2 class="text-light">{{ el.title }}</h2>
+        <p class="text-light">{{ el.intro }}</p>
+        <p><b class="text-light">{{ el.date.date() }}</b></p>
+        <a href="/posts/{{ el.id }}" class="btn btn-outline-light">More details</a>
+</div>
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}

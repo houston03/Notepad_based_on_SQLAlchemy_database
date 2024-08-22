@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Projects
+{% endblock %}
+
+{% block body %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tet.css') }}">
+<div class="container">
+
+    <div style="margin: 0px 20px 10px 20px">
+    <h1>Ideas</h1>
+    </div>
+    <a href="/create_article" class="btn btn-outline-light">     Offer     </a>
+    <a href="/posts" class="btn btn-outline-light">Your suggestions</a>
+
+    </div>
+    <div style="margin: 10px 20px 10px 20px">
+<p>Here you can propose an idea for your application, website, telegram bot, etc.</p>
+    </div>
+{% endblock %}
