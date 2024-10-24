@@ -1,3 +1,5 @@
+## Блокнот на базе данных SQLAlchemy
+
 Сайт на Flask с базой данных SQLAlchemy. Сайт является мини-блокнотом, где можно добавлять записи, редактировать их и удалять. 
 
 ![image](https://github.com/user-attachments/assets/97bab9ee-2340-4ba0-aefc-b79bfccd0956)
